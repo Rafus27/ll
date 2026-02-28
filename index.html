@@ -1759,6 +1759,7 @@
 
         .nav div p {
             margin: 0;
+            text-transform: uppercase;
         }
 
         .nav div :first-child {
@@ -1851,23 +1852,24 @@
 
         .rel-cont {
             display: flex;
-            padding: 5px;
+            padding: 3px;
         }
 
         .rel-cont div {
-            width: 56px;
-            height: 56px;
+            width: 32px;
+            height: 32px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-radius: 12px;
-            font-size: 24px;
+            border-radius: 6px;
+            font-size: 12px;
             font-weight: 800;
         }
 
         .rel-num {
-            background-color: #05657D;
-            color: #fffcf2;
+            background-color: #fffcf2;
+            color: #252422;
+            border: 2px solid #252422;
         }
 
         .rel-arw {
@@ -1876,7 +1878,7 @@
         }
 
         .rel-arw svg {
-            width: 32px;
+            width: 24px;
         }
 
         h1 {
@@ -1910,7 +1912,7 @@
             max-width: 52px;
             min-height: 16px;
             height: 100%;
-            font-size: 7px;
+            font-size: 8px;
             margin: 0;
             hyphens: auto;
             word-wrap: break-word;
@@ -1996,6 +1998,23 @@
         charity.innerHTML = '<p>20</p><p class="desc">Благотвори&shyтельность</p>';
 
         let relAcc = "";
+
+        document.getElementById('13').innerHTML = '<p>13</p><p class="desc">Ничтож&shyность</p>';
+
+        document.getElementById('13').innerHTML = '<p>13</p><p class="desc">Ничтож&shyность</p>';
+
+        document.getElementById('41').innerHTML = '<p>41</p><p class="desc">Человечес&shyкий План</p>';
+
+        document.getElementById('47').innerHTML = '<p>47</p><p class="desc">План Нейтраль&shyности</p>';
+
+        document.getElementById('64').innerHTML = '<p>64</p><p class="desc">Феноменаль&shyный План</p>';
+
+        document.getElementById('67').innerHTML = '<p>67</p><p class="desc">План Космическо&shyго Блага</p>';
+
+        document.getElementById('65').innerHTML = '<p>65</p><p class="desc" style="font-size: 7px">План Внутреннего Пространства</p>';
+
+
+
 
         for (let i = 0; i < data_r.length; i++) {
             relAcc += `
