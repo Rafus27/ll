@@ -2044,7 +2044,7 @@
             }
             let sampc = "";
             for (let i = 0; i < data.sample.length; i++) {
-                sampc += `<p><b>Запрос:</b> ${data.sample[i].request}</p>`;
+                sampc += `<p><b>Запрос:</b> ${data.sample[i].request}</p><p><b>Подсказка:</b> ${data.sample[i].clue}</p>`;
 
                 for (let j = 0; j < data.sample[i].content.length; j++) {
                     sampc += "<p>" + data.sample[i].content[j] + "</p>"
@@ -2129,6 +2129,7 @@ viewBox="0 0 35.19 34.86"
 
 
 </html>
+
 
 
 
