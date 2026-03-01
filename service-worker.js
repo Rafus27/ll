@@ -1,10 +1,9 @@
 const CACHE_NAME = "v1";
 const urlsToCache = [
-    "/",
-    "/index.html",
-    "/background.webp",
-    "/background2.webp",
-    "/icon.webp"
+    "index.html",
+    "background.webp",
+    "background2.webp",
+    "icon.webp"
 ]
 
 self.addEventListener("install", event => {
@@ -35,4 +34,5 @@ self.addEventListener("fetch", event => {
     caches.match(event.request)
       .then(response => response || fetch(event.request))
   );
+
 });
