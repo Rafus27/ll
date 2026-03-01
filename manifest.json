@@ -1,0 +1,16 @@
+{
+  "name": "LILA",
+  "start_url": "/",
+  "display": "standalone",
+  "short_name": "LILA",
+  "theme_color": "#05657D",
+  "background_color": "#fffcf2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.webp",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
