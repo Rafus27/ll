@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LILA</title>
     <link rel="shortcut icon" href="icon.webp" type="image/x-icon">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#05657D">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script id="data" type="application/json">
@@ -1965,9 +1965,9 @@
     <script>
 
         if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
-    .then(() => console.log('Service Worker зарегистрирован'))
-    .catch(err => console.error('Ошибка регистрации SW:', err));
+  navigator.serviceWorker.register('service-worker.js')
+    .then(() => console.log('Service Worker Active'))
+    .catch(err => console.error('Error SW:', err));
 }
 
         let data = JSON.parse(document.getElementById('data').textContent);
@@ -2145,6 +2145,7 @@ viewBox="0 0 35.19 34.86"
 
 
 </html>
+
 
 
 
