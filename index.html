@@ -1966,7 +1966,7 @@
 
         if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js')
-    .then(() => console.log('Service Worker Active'))
+    //.then(() => console.log('Service Worker Active'))
     .catch(err => console.error('Error SW:', err));
 }
 
@@ -1979,26 +1979,31 @@
         let background = document.getElementById('background');
         let isMenu = true;
 
+        let scroll = 0
+
         function toggleMenu() {
             if (isMenu) {
+                scroll = window.scrollY;
                 container.style.display = "block";
                 nav.style.display = "none";
                 rel.style.display = "none";
                 background.style.display = "none";
                 isMenu = false;
+                window.scrollTo(0, 0);
             } else {
                 container.style.display = "none";
                 nav.style.display = "flex";
                 rel.style.display = "flex";
                 background.style.display = "flex";
                 isMenu = true;
+                window.scrollTo(0, scroll);
             }
         }
 
         function setSection(event) {
-            console.log;
+            // console.log;
             let obj = data[(event.currentTarget.id) - 1];
-            console.log(obj);
+            // console.log(obj);
             container.innerHTML = buildSection(data[(event.currentTarget.id) - 1])
             toggleMenu();
         };
@@ -2047,8 +2052,15 @@
 
         rel.innerHTML = relAcc;
 
+        function pop() {
+            toggleMenu()
+            window.removeEventListener("popstate", pop)
+        }
+
         function buildSection(data) {
-            console.log(data.sample[0].request);
+            history.pushState(null, "", `/${data.id}`)
+
+            window.addEventListener("popstate", pop)
 
             let transc = "";
             if (data.transcript !== " ") {
